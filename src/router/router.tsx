@@ -7,7 +7,7 @@ import ResetPasswordScreen from "../pages/auth/ResetPassword";
 import CreateAccountNotification from "../pages/auth/CreateAccountNotification";
 import ForgetPasswordNotification from "../pages/auth/ForgetPasswordNotification";
 import HomeScreen from "../pages/home/HomeScreen";
-// import PrivateRoute from "./privateRoute";
+import PrivateRoute from "./privateRoute";
 import ErrorScreen from "../static/error/ErrorScreen";
 import ProductDetailPage from "../pages/home/ProductDetailPage";
 import CartPage from "../pages/home/CartPage";
@@ -26,9 +26,10 @@ export const router = createBrowserRouter([
   {
     path: "/",
     element: (
-      // <PrivateRoute>
-      <MyLayout />
-      // </PrivateRoute>
+      <PrivateRoute>
+        <MyLayout />
+        //{" "}
+      </PrivateRoute>
     ),
     children: [
       {
