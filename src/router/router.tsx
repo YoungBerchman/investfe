@@ -34,6 +34,7 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
+        path: "/home",
         element: <HomeScreen />,
       },
       {
@@ -54,7 +55,6 @@ export const router = createBrowserRouter([
     element: <ErrorScreen />,
   },
   {
-    path: "/auth",
     element: <Layout />,
     children: [
       {
